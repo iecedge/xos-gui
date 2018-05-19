@@ -19,7 +19,7 @@ COPY ${CODE_SOURCE}/gulp_tasks/ ${CODE_DEST}/gulp_tasks/
 COPY ${CODE_SOURCE}/src/ ${CODE_DEST}/src/
 
 WORKDIR ${CODE_DEST}
-RUN npm install \
+RUN npm dedupe && npm install \
  && npm run typings \
  && npm run build
 
