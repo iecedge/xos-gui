@@ -4,6 +4,7 @@
 # xos-gui-base container
 FROM cachengo/xos-gui-builder:1.0.0 as xos-gui-base
 
+
 ENV CODE_SOURCE .
 ENV CODE_DEST /var/www
 ENV VHOST /var/www/dist
@@ -25,7 +26,7 @@ RUN npm dedupe && npm install \
 
 
 # xos-gui container
-FROM nginx:candidate
+FROM nginx:1.13
 
 ENV CODE_SOURCE .
 ENV VHOST /var/www/dist
