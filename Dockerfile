@@ -2,7 +2,7 @@
 # docker build -f Dockerfile -t xosproject/xos-gui:candidate .
 
 # xos-gui-base container
-FROM xosproject/xos-gui-builder:candidate as xos-gui-base
+FROM cachengo/xos-gui-builder:1.0.0 as xos-gui-base
 
 ENV CODE_SOURCE .
 ENV CODE_DEST /var/www
